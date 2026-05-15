@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import ProjectCard from "../ui/ProjectCard";
-import volunteerImg from "../../assets/images/volunteer-analytics.png";
-import spiImg from "../../assets/images/spi-navigation.png";
+import volunteerImg from "../../assets/Images/volunteer-analytics.png";
+import spiImg from "../../assets/Images/spi-navigation.png";
 
 const projects = [
   {
