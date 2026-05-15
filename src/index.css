@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+/* ── Design Tokens ── */
+:root {
+  --color-bg:      #111010;
+  --color-surface: #1C1B1B;
+  --color-border:  #2A2828;
+  --color-text:    #F2EDE8;
+  --color-muted:   #A09A94;
+  --color-accent:  #C9A96E;
+  --font-display:  'DM Serif Display', serif;
+  --font-sans:     'DM Sans', sans-serif;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
