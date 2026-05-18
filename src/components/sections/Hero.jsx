@@ -34,7 +34,7 @@ const textBlockStyle = {
   flex: "1 1 520px",
   display: "flex",
   flexDirection: "column",
-  gap: "1.5rem",
+  gap: "1.25rem",
 };
 
 const eyebrowStyle = {
@@ -55,8 +55,19 @@ const headingStyle = {
 
 const taglineStyle = {
   fontFamily: "var(--font-sans)",
-  fontSize: "clamp(1rem, 2vw, 1.2rem)",
+  fontSize: "clamp(1rem, 2vw, 1.15rem)",
   lineHeight: 1.7,
+  color: "var(--color-text)",
+  maxWidth: "480px",
+  margin: 0,
+  fontStyle: "italic",
+  opacity: 0.85,
+};
+
+const subtextStyle = {
+  fontFamily: "var(--font-sans)",
+  fontSize: "clamp(0.9rem, 1.5vw, 1rem)",
+  lineHeight: 1.75,
   color: "var(--color-muted)",
   maxWidth: "480px",
   margin: 0,
@@ -167,7 +178,7 @@ export default function Hero() {
             animate="visible"
             custom={0.1}
           >
-            UX Engineer
+            UX Engineer · Human-Centered Design · Front-End Development
           </motion.p>
 
           <motion.h1
@@ -198,12 +209,24 @@ export default function Hero() {
             I design for humans, build for systems,<br />and research the space between.
           </motion.p>
 
+          <motion.p
+            style={subtextStyle}
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            custom={0.55}
+          >
+            I combine UX research, interface design, accessibility, and
+            front-end development to turn user needs into functional
+            digital products.
+          </motion.p>
+
           <motion.div
             style={ctaRowStyle}
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            custom={0.6}
+            custom={0.65}
           >
             <a
               href="#projects"

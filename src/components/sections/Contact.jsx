@@ -24,7 +24,7 @@ const contactLinks = [
   },
   {
     id: "resume",
-    label: "Résumé",
+    label: "Resume",
     value: "Download PDF",
     href: "/Daniela_Ordaz_Resume_2026.pdf",
     download: true,
@@ -76,12 +76,6 @@ const subheadStyle = {
   color: "var(--color-muted)",
   lineHeight: 1.7,
   margin: 0,
-};
-
-const gridStyle = {
-  display: "grid",
-  gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))",
-  gap: "1.5rem",
 };
 
 const cardBaseStyle = {
@@ -137,7 +131,7 @@ const availabilityStyle = {
   backgroundColor: "var(--color-surface)",
   border: "1px solid var(--color-border)",
   borderRadius: "6px",
-  maxWidth: "480px",
+  maxWidth: "560px",
 };
 
 const dotPulseStyle = {
@@ -159,6 +153,12 @@ const availabilityTextStyle = {
 const availabilityEmStyle = {
   color: "var(--color-text)",
   fontStyle: "normal",
+};
+
+const gridStyle = {
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))",
+  gap: "1.5rem",
 };
 
 const fadeUp = {
@@ -203,11 +203,11 @@ export default function Contact() {
         >
           <p style={labelStyle}>Get In Touch</p>
           <h2 style={headingStyle}>
-            Let us build something human-centered together.
+            Let's connect about UX Engineer, UX Design, or Front-End opportunities.
           </h2>
           <p style={subheadStyle}>
-            I am currently open to full-time UX Engineer, UX Designer, and
-            Front-End Developer roles. Feel free to reach out — I would love
+            I am currently open to full-time entry-level UX Engineer, UX Design,
+            and Front-End Developer roles. Feel free to reach out — I would love
             to connect.
           </p>
         </motion.div>
@@ -222,7 +222,8 @@ export default function Contact() {
           <div style={dotPulseStyle} />
           <p style={availabilityTextStyle}>
             <em style={availabilityEmStyle}>Available for opportunities</em>
-            {" "}— open to full-time, contract, and internship roles.
+            {" "}— open to full-time entry-level and contract roles in UX Engineering,
+            UX Design, and Front-End Development.
           </p>
         </motion.div>
 

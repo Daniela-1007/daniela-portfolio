@@ -33,6 +33,7 @@ const skillCategories = [
     icon: "◈",
     skills: [
       "VS Code",
+      "GitHub",
       "Google Analytics ✦ Certified",
       "Google Colab",
       "draw.io",
@@ -41,12 +42,11 @@ const skillCategories = [
   },
   {
     id: 4,
-    label: "Currently Growing",
+    label: "Currently Building",
     icon: "↗",
     skills: [
       "JavaScript",
       "React",
-      "GitHub",
       "Figma Make",
       "Streamlit",
     ],
@@ -73,7 +73,7 @@ const headerStyle = {
   display: "flex",
   flexDirection: "column",
   gap: "1rem",
-  maxWidth: "600px",
+  maxWidth: "640px",
 };
 
 const labelStyle = {
@@ -205,9 +205,11 @@ export default function Skills() {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <p style={labelStyle}>Capabilities</p>
-          <h2 style={headingStyle}>What I know, and what I am learning.</h2>
+          <h2 style={headingStyle}>
+            Skills and tools I use to design, build, and improve digital experiences.
+          </h2>
           <p style={subheadStyle}>
-            Honest about where I am strong, transparent about where I am growing.
+            Honest about where I am strong, transparent about where I am building.
             Every skill listed is something I can speak to confidently.
           </p>
         </motion.div>
@@ -239,8 +241,7 @@ export default function Skills() {
 
               {cat.growing && (
                 <p style={growingNoteStyle}>
-                  Actively building — these are skills I am developing through
-                  current projects and learning.
+                  Actively building through current projects and continued learning.
                 </p>
               )}
             </motion.div>

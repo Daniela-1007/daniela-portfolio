@@ -173,7 +173,6 @@ const expCardStyle = {
   display: "flex",
   flexDirection: "column",
   gap: "1rem",
-  transition: "background 0.2s ease",
 };
 
 const expCardLastStyle = {
@@ -295,11 +294,11 @@ export default function Resume() {
           <div style={headerLeftStyle}>
             <p style={labelStyle}>Experience</p>
             <h2 style={headingStyle}>
-              Where I have learned,<br />and what I have built.
+              Experience that connects design, code, and user-centered problem solving.
             </h2>
             <p style={subheadStyle}>
-              A summary of my professional experience. Download the full PDF
-              for complete details.
+              A summary of my education, internships, technical projects, and UX work.
+              Download the full resume for complete details.
             </p>
             <a
               href="https://www.linkedin.com/in/daniela-ordaz/"
@@ -321,7 +320,7 @@ export default function Resume() {
             onMouseLeave={handleBtnLeave}
             aria-label="Download Daniela Ordaz resume PDF"
           >
-            Download Résumé
+            Download Resume
           </a>
         </motion.div>
 

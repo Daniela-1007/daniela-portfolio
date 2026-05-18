@@ -12,7 +12,7 @@ const innerStyle = {
   width: "100%",
   display: "flex",
   flexDirection: "column",
-  gap: "5rem",
+  gap: "4rem",
 };
 
 const topRowStyle = {
@@ -263,7 +263,7 @@ export default function About() {
         <div style={dividerStyle} />
 
         <motion.div
-          style={{ display: "flex", flexDirection: "column", gap: "2rem" }}
+          style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}

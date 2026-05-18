@@ -6,7 +6,7 @@
   --color-surface: #1C1B1B;
   --color-border:  #2A2828;
   --color-text:    #F2EDE8;
-  --color-muted:   #A09A94;
+  --color-muted:   #B8B2AC;
   --color-accent:  #C9A96E;
   --font-display:  'DM Serif Display', serif;
   --font-sans:     'DM Sans', sans-serif;
@@ -18,3 +18,4 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
 }
+
