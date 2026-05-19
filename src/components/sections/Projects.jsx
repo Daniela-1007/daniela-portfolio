@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import ProjectCard from "../ui/ProjectCard";
 import volunteerImg from "../../assets/Images/volunteer-analytics.png";
 import spiImg from "../../assets/Images/spi-navigation.png";
+import healthOverviewImg from "../../assets/Images/health-overview.png";
 
 const projects = [
   {
@@ -9,48 +11,52 @@ const projects = [
     title: "Outlook Email Automation Tool",
     category: "Automation · Python · AI",
     description:
-      "A Python-based workflow automation tool built for a Penn State professor. Connects to Outlook, scans incoming emails every 3 minutes via Windows Task Scheduler, and sorts them using keyword detection across subject lines, bodies, and sender addresses. For flagged categories, it calls the OpenAI API to generate a draft reply saved to Drafts with an [AUTO DRAFT] prefix — the user always reviews before sending. Includes edge-case handling to force-launch Outlook if closed, and a safety limit to prevent runaway automation.",
+      "Built a Python-based email automation tool for a Penn State professor to organize Outlook emails using sender rules, keyword detection, and scheduled processing. Integrated the OpenAI API to generate draft replies for review, with safeguards to keep the user in control before sending.",
     tags: ["Python", "OpenAI API", "win32com", "Task Scheduler", "Automation"],
     type: "code",
     image: null,
     youtube: null,
     link: null,
+    caseStudy: "/projects/outlook",
   },
   {
     id: 2,
     title: "Volunteer Page Revamp",
     category: "UX Design · Research · Figma",
     description:
-      "A full UX redesign of The Salvation Army's volunteer page. Starting from usability testing and user interviews, I identified friction points in the sign-up flow and information hierarchy. Delivered wireframes, prototypes, and a revised page layout that improved navigation clarity — with real analytics tracking improved engagement post-launch.",
-    tags: ["Figma", "Usability Testing", "Wireframing", "UX Research", "Prototyping"],
+      "Redesigned The Salvation Army's volunteer page by conducting a page audit and 10–15 user interviews to identify content gaps. Built the redesign using HTML, CSS, and Zesty.io CMS — adding new sections, imagery, and the organizational values that prospective volunteers look for.",
+    tags: ["Figma", "Usability Testing", "Wireframing", "UX Research", "HTML & CSS", "Zesty.io"],
     type: "design",
     image: volunteerImg,
     youtube: "https://youtu.be/O9t4Scj-vy8?si=wQYRRCC0kUtVh5br",
     link: null,
+    caseStudy: "/projects/volunteer",
   },
   {
     id: 3,
-    title: "Health Portal Redesign",
+    title: "Health Portal Concept",
     category: "UX Design · Accessibility · Figma",
     description:
-      "A research-to-prototype redesign of a student health portal. Conducted user interviews and journey mapping to surface pain points in appointment scheduling and records access. Designed accessible, WCAG-compliant prototypes in Figma focused on reducing cognitive load for users navigating a stressful experience.",
-    tags: ["Figma", "Accessibility", "WCAG", "Journey Mapping", "User Research"],
+      "An original research-to-prototype design of a mobile health portal helping users manage doctors, appointments, medical records, and insurance in one place. Conducted user interviews, created personas and user flows, ran usability tests, and designed an accessible high-fidelity Figma prototype.",
+    tags: ["Figma", "Accessibility", "User Research", "Usability Testing", "Mobile Design"],
     type: "design",
-    image: null,
+    image: healthOverviewImg,
     youtube: "https://youtu.be/bFzBB-kWDvc?si=UfdHm_u3GNuH7HE",
     link: null,
+    caseStudy: "/projects/health-portal",
   },
   {
     id: 4,
     title: "Navigation Revamp — SPI Pharma",
     category: "UX Design · Information Architecture",
     description:
-      "An information architecture and navigation overhaul for SPI Pharma's website. Analyzed the existing navigation structure, identified findability issues, and redesigned the menu system to reduce clicks to key content. Delivered a full presentation of findings and redesign rationale to the marketing team.",
-    tags: ["Information Architecture", "Figma", "UX Research", "Presentation"],
+      "As sole UX designer at SPI Pharma, used Google Analytics and tree testing to identify navigation findability issues. Redesigned the cascading dropdown into a flat mega-menu and presented findings to the marketing team.",
+    tags: ["Information Architecture", "Google Analytics", "Tree Testing", "Figma"],
     type: "design",
     image: spiImg,
     youtube: "https://youtu.be/qClCKYDb7i4?si=VW3mPFgXPGfAU3B4",
     link: null,
+    caseStudy: "/projects/spi-pharma",
   },
 ];
 

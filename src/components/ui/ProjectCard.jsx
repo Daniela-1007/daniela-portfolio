@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const cardStyle = {
   backgroundColor: "var(--color-surface)",
@@ -100,7 +101,22 @@ const footerStyle = {
   paddingTop: "0.5rem",
 };
 
-const linkBtnStyle = {
+const primaryLinkStyle = {
+  fontFamily: "var(--font-sans)",
+  fontSize: "0.775rem",
+  fontWeight: 500,
+  letterSpacing: "0.08em",
+  textTransform: "uppercase",
+  color: "#111010",
+  textDecoration: "none",
+  backgroundColor: "var(--color-accent)",
+  borderRadius: "2px",
+  padding: "0.5rem 1.1rem",
+  transition: "opacity 0.2s ease",
+  display: "inline-block",
+};
+
+const secondaryLinkStyle = {
   fontFamily: "var(--font-sans)",
   fontSize: "0.775rem",
   fontWeight: 500,
@@ -159,14 +175,22 @@ export default function ProjectCard({ project }) {
     if (img) img.style.transform = "scale(1)";
   }
 
-  function handleLinkEnter(e) {
+  function handleSecondaryEnter(e) {
     e.target.style.backgroundColor = "var(--color-accent)";
     e.target.style.color = "#111010";
   }
 
-  function handleLinkLeave(e) {
+  function handleSecondaryLeave(e) {
     e.target.style.backgroundColor = "transparent";
     e.target.style.color = "var(--color-accent)";
+  }
+
+  function handlePrimaryEnter(e) {
+    e.target.style.opacity = "0.85";
+  }
+
+  function handlePrimaryLeave(e) {
+    e.target.style.opacity = "1";
   }
 
   return (
@@ -187,20 +211,13 @@ export default function ProjectCard({ project }) {
         {project.type === "code" ? (
           <div style={codePreviewStyle}>
             {codeLines.map((line, i) => (
-              <div
-                key={i}
-                style={{ ...codeLineStyle, color: line.color }}
-              >
+              <div key={i} style={{ ...codeLineStyle, color: line.color }}>
                 {line.text}
               </div>
             ))}
           </div>
         ) : project.image ? (
-          <img
-            src={project.image}
-            alt={project.title}
-            style={imageStyle}
-          />
+          <img src={project.image} alt={project.title} style={imageStyle} />
         ) : (
           <div
             style={{
@@ -233,40 +250,34 @@ export default function ProjectCard({ project }) {
 
         <div style={tagsRowStyle}>
           {project.tags.map((tag) => (
-            <span key={tag} style={tagStyle}>
-              {tag}
-            </span>
+            <span key={tag} style={tagStyle}>{tag}</span>
           ))}
         </div>
 
-        {(project.link || project.youtube) && (
-          <div style={footerStyle}>
-            {project.youtube && (
-              <a
-                href={project.youtube}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={linkBtnStyle}
-                onMouseEnter={handleLinkEnter}
-                onMouseLeave={handleLinkLeave}
-              >
-                Watch Walkthrough
-              </a>
-            )}
-            {project.link && (
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={linkBtnStyle}
-                onMouseEnter={handleLinkEnter}
-                onMouseLeave={handleLinkLeave}
-              >
-                View Project
-              </a>
-            )}
-          </div>
-        )}
+        <div style={footerStyle}>
+          {project.caseStudy && (
+            <Link
+              to={project.caseStudy}
+              style={primaryLinkStyle}
+              onMouseEnter={handlePrimaryEnter}
+              onMouseLeave={handlePrimaryLeave}
+            >
+              View Case Study
+            </Link>
+          )}
+          {project.youtube && (
+            <a
+              href={project.youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={secondaryLinkStyle}
+              onMouseEnter={handleSecondaryEnter}
+              onMouseLeave={handleSecondaryLeave}
+            >
+              Watch Walkthrough
+            </a>
+          )}
+        </div>
       </div>
     </motion.div>
   );
