@@ -274,7 +274,7 @@ export default function ProjectCard({ project }) {
               onMouseEnter={handleSecondaryEnter}
               onMouseLeave={handleSecondaryLeave}
             >
-              View Live Site ↗
+              {project.type === "code" ? "View on GitHub ↗" : "View Live Site ↗"}
             </a>
           )}
           {project.youtube && (

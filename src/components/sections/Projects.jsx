@@ -16,7 +16,7 @@ const projects = [
     type: "code",
     image: null,
     youtube: null,
-    link: null,
+    link: "https://github.com/Daniela-1007/outlook-automation-",
     caseStudy: "/projects/outlook",
   },
   {
