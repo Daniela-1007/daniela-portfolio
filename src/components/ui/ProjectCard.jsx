@@ -265,6 +265,18 @@ export default function ProjectCard({ project }) {
               View Case Study
             </Link>
           )}
+          {project.link && (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={secondaryLinkStyle}
+              onMouseEnter={handleSecondaryEnter}
+              onMouseLeave={handleSecondaryLeave}
+            >
+              View Live Site ↗
+            </a>
+          )}
           {project.youtube && (
             <a
               href={project.youtube}

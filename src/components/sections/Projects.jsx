@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import ProjectCard from "../ui/ProjectCard";
 import volunteerImg from "../../assets/Images/volunteer-analytics.png";
 import spiImg from "../../assets/Images/spi-navigation.png";
 import healthOverviewImg from "../../assets/Images/health-overview.png";
+import helpfulPetImg from "../../assets/Images/helpfulpet-home.png";
 
 const projects = [
   {
@@ -50,13 +50,26 @@ const projects = [
     title: "Navigation Revamp — SPI Pharma",
     category: "UX Design · Information Architecture",
     description:
-      "As sole UX designer at SPI Pharma, used Google Analytics and tree testing to identify navigation findability issues. Redesigned the cascading dropdown into a flat mega-menu and presented findings to the marketing team.",
+      "As sole UX designer at SPI Pharma, used Google Analytics and tree testing to identify navigation findability issues. Redesigned the cascading dropdown into a structured navigation system and presented findings to the marketing team.",
     tags: ["Information Architecture", "Google Analytics", "Tree Testing", "Figma"],
     type: "design",
     image: spiImg,
     youtube: "https://youtu.be/qClCKYDb7i4?si=VW3mPFgXPGfAU3B4",
     link: null,
     caseStudy: "/projects/spi-pharma",
+  },
+  {
+    id: 5,
+    title: "HelpfulPet — E-Commerce Web App",
+    category: "Full-Stack Development · Node.js · Express",
+    description:
+      "A full-stack e-commerce web application for pet travel accessories built with Node.js and Express. Features product browsing with live filtering, individual product pages, a persistent localStorage cart, free shipping logic, checkout, and order confirmation — all server-side rendered with EJS.",
+    tags: ["Node.js", "Express.js", "EJS", "JavaScript", "CSS", "localStorage"],
+    type: "design",
+    image: helpfulPetImg,
+    youtube: null,
+    link: "https://helpful-pet.onrender.com",
+    caseStudy: "/projects/helpful-pet",
   },
 ];
 

@@ -11,6 +11,7 @@ import OutlookCaseStudy from "./pages/OutlookCaseStudy";
 import VolunteerCaseStudy from "./pages/VolunteerCaseStudy";
 import HealthPortalCaseStudy from "./pages/HealthPortalCaseStudy";
 import SPICaseStudy from "./pages/SPICaseStudy";
+import HelpfulPetCaseStudy from "./pages/HelpfulPetCaseStudy";
 
 function HomePage() {
   return (
@@ -37,6 +38,7 @@ function App() {
       <Route path="/projects/volunteer" element={<VolunteerCaseStudy />} />
       <Route path="/projects/health-portal" element={<HealthPortalCaseStudy />} />
       <Route path="/projects/spi-pharma" element={<SPICaseStudy />} />
+      <Route path="/projects/helpful-pet" element={<HelpfulPetCaseStudy />} />
     </Routes>
   );
 }

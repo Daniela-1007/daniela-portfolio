@@ -67,6 +67,7 @@ const footerInnerStyle = {
 const navLinksStyle = {
   display: "flex",
   gap: "1.5rem",
+  flexWrap: "wrap",
 };
 
 const navLinkStyle = {
@@ -84,6 +85,7 @@ const projects = [
   { label: "Volunteer Page", path: "/projects/volunteer" },
   { label: "Health Portal Concept", path: "/projects/health-portal" },
   { label: "SPI Pharma", path: "/projects/spi-pharma" },
+  { label: "HelpfulPet", path: "/projects/helpful-pet" },
 ];
 
 export default function CaseStudyLayout({ children, currentPath }) {
